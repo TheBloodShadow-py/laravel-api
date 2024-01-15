@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+
+figure:hover #custom-hover {
+    opacity: 100;
+    z-index: 1;
+}
+
+figure:hover {
+    transform: scale(1.05);
+}
+
+figure #custom-hover {
+    opacity: 0;
+    z-index: -1;
+}

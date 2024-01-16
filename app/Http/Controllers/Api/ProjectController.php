@@ -13,7 +13,7 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $projects = Project::with('type', 'technology')->paginate(5);
+        $projects = Project::with('type', 'technology')->paginate(6);
         if ($projects) {
             return response()->json(['success' => true, 'results' => $projects]);
         } else {

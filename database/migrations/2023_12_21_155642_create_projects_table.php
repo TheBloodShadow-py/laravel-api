@@ -18,6 +18,7 @@ return new class extends Migration
             $table->text('description');
             $table->string('stars')->nullable();
             $table->string('mainlanguage')->nullable();
+            $table->string('slug')->unique();
             $table->timestamps();
         });
     }

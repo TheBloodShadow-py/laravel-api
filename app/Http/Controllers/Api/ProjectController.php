@@ -34,7 +34,11 @@ class ProjectController extends Controller
      */
     public function show(Project $project)
     {
-        //
+        if ($project) {
+            return response()->json(['success' => true, 'results' => $project->load('type', 'technology')]);
+        } else {
+            return response()->json(['success' => false, 'results' => null]);
+        }
     }
 
     /**
